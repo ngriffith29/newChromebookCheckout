@@ -1,23 +1,29 @@
 import logo from './logo.svg';
 import './App.css';
+import { pulse, flash} from 'react-animations'
+import styled, { keyframes } from 'styled-components';
+import Scan from './Components/Scan'
+
+const bounceAnimation = keyframes`${flash}`;
+
+
+const BouncyDiv= styled.h1 `
+  color: red;
+  animation: 5s ${bounceAnimation};
+  height: 25%;
+  width: 25%;
+  animation-fill-mode: forwards;
+  font-size: 200px;
+
+
+`
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* <BouncyDiv>hi</BouncyDiv> */}
+     <Scan />
     </div>
   );
 }
