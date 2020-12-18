@@ -87,7 +87,7 @@ const click = (event) => {
     <BrokeReason broke={reason.forgot} onClick={click}>I Forgot my chromebook</BrokeReason>
     </Wrapper>
     {/* <Scan /> */}
-    {reason.broke ? <Broke name={setName}   /> : null || reason.return ? <Return name={setName}  /> : null || reason.forgot ? <Forgot name={setName}  /> : null}
+    {reason.broke ? <Broke name={setName} fields={name.firstName}   /> : null || reason.return ? <Return name={setName}  /> : null || reason.forgot ? <Forgot name={setName}  /> : null}
   
     {/* <Name name={setName} /> */}
 
